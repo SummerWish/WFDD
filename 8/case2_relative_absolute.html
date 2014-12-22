@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<body>
+<style>
+    body {
+        font-family: "Open Sans", "Seravek", "Segoe UI", "Tahoma";
+        font-size: 30px;
+        margin-top: 50px;
+    }
+    
+    .box {
+        padding: 20px;
+        opacity: 0.5;
+    }
+    .box:hover {
+        opacity: 1;
+    }
+    .box:hover .box {
+        opacity: 1 !important;
+    }
+
+    .box-level-1 {
+        border: 5px solid #000;
+    }
+    
+    .box-level-2 {
+        border: 5px solid #F00;
+    }
+
+    .box1 {
+        position: absolute;
+        right: 150px;
+        top: 50px;
+        width: 600px;
+    }
+
+    .box1-1 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .box2 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .box3 {
+        position: relative;
+        width: 500px;
+        margin-bottom: 100px;
+    }
+
+    .box3-1 {
+        position: absolute;
+        right: -100px;
+        bottom: 0;
+    }
+    
+    .box3-2 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+</style>
+    
+
+<div class="box box1 box-level-1">position: absolute;<br>right: 150px;<br>top: 50px;<br>width: 600px;
+    <div class="box box1-1 box-level-2">position: absolute<br>right: 0;<br>bottom: 0;</div>
+</div>
+
+<div class="box box2 box-level-1">position: absolute;<br>right: 0;<br>bottom: 0;</div>
+
+<div class="box box3 box-level-1">position: relative;<br>width: 500px;</div>
+<div class="box box3 box-level-1">position: relative;<br>width: 500px;
+    <div class="box box3-1 box-level-2">position: absolute<br>right: -100px;<br>bottom: 0;</div>
+</div>
+<div class="box box3 box-level-1">position: relative;<br>width: 500px;
+    <div class="box box3-2 box-level-2">position: absolute<br>right: 0;<br>bottom: 0;</div>
+</div>
+</body>
